@@ -1,17 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-const mapTechnologiesColor = {
-  Reactjs: ["bg-sky-50", "text-sky-600"],
-  Angular: ["bg-rose-50", "text-rose-600"],
-  Dotnet: ["bg-indigo-50", "text-indigo-600"],
-  Sqlserver: ["bg-yellow-50", "text-yellow-600"],
-  Firebase: ["bg-orange-50", "text-orange-600"],
-  Azure: ["bg-teal-50", "text-teal-600"],
-  Appwrite: ["bg-pink-50", "text-pink-600"],
-  RTK: ["bg-purple-50", "text-purple-600"],
-  defaultColor: ["bg-sky-50", "text-sky-600"],
-};
+import { mapTechnologiesColor } from "../../../constants";
 
 function ProjectInfoCard({ project }) {
   const { id, name, purpose, contributions, technologies, projectLink } =
@@ -40,7 +29,7 @@ function ProjectInfoCard({ project }) {
             <h1 className="text-white font-bold">{name}</h1>
           </div>
         </div>
-        <div className="card-info m-5 p-1">
+        <div className="card-info m-5 p-1 min-h-72">
           <div className="project-heading ">
             <h1 className="text-lg font-bold text-gray-800 "> {purpose}</h1>
           </div>
@@ -48,11 +37,11 @@ function ProjectInfoCard({ project }) {
             <h1 className="mt-2 mb-2 dark:text-gray-100 text-xl">
               Project Contributions
             </h1>
-            <div className="grid">
+            <div className="">
               {contributions.map((contribution, index) => {
                 return (
                   <div key={`contribution-${id + index}`}>
-                    <span className="text-gray-500 dark:text-gray-50 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                    <span className="text-gray-500 dark:text-gray-50 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center pt-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -72,7 +61,7 @@ function ProjectInfoCard({ project }) {
             </div>
           </div>
         </div>
-        <div className="technologies m-5 p-1">
+        <div className="technologies m-5 p-1 min-h-28">
           <h1 className="text-lg font-bold text-gray-800 "> Technologies</h1>
           <div className="tech-used flex flex-wrap">
             {technologies.map((technology, index) => {
