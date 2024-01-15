@@ -151,9 +151,6 @@ export const assetReferences = {
   pic: pic,
   kukLogo: KukLogo,
   beboLogo: BeboLogo,
-  // pic: "src\\assets\\pic.jpg",
-  // kukLogo: "src\\assets\\kuk_logo.png",
-  // beboLogo: "src\\assets\\bebo_logo.jpg",
 };
 
 export const educationDetails = [

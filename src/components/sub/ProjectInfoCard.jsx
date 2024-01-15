@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { mapTechnologiesColor } from "../../../constants";
-
+console.log(mapTechnologiesColor);
 function ProjectInfoCard({ project }) {
   const { id, name, purpose, contributions, technologies, projectLink } =
     project;
