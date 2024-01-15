@@ -7,6 +7,7 @@ import {
 } from "../../constants";
 import { Link } from "react-router-dom";
 import { GithubSvg, HackerrankSvg, LinkedInSvg } from "./svg/Icons";
+
 function About() {
   return (
     <>

@@ -1,3 +1,7 @@
+import BeboLogo from "./src/images/bebo_logo.jpg";
+import KukLogo from "./src/images/kuk_logo.png";
+import pic from "./src/images/pic.jpg";
+
 export const projects = [
   {
     id: 1,
@@ -144,9 +148,12 @@ export const mapTechnologiesColor = {
 };
 
 export const assetReferences = {
-  pic: "src\\assets\\pic.jpg",
-  kukLogo: "src\\assets\\kuk_logo.png",
-  beboLogo: "src\\assets\\bebo_logo.jpg",
+  pic: pic,
+  kukLogo: KukLogo,
+  beboLogo: BeboLogo,
+  // pic: "src\\assets\\pic.jpg",
+  // kukLogo: "src\\assets\\kuk_logo.png",
+  // beboLogo: "src\\assets\\bebo_logo.jpg",
 };
 
 export const educationDetails = [
