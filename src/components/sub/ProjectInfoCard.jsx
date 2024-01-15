@@ -34,14 +34,12 @@ function ProjectInfoCard({ project }) {
             <h1 className="text-lg font-bold text-gray-800 "> {purpose}</h1>
           </div>
           <div className="project-other-details pt-5">
-            <h1 className="mt-2 mb-2 dark:text-gray-100 text-xl">
-              Project Contributions
-            </h1>
+            <h1 className="mt-2 mb-2 text-xl">Project Contributions</h1>
             <div className="">
               {contributions.map((contribution, index) => {
                 return (
                   <div key={`contribution-${id + index}`}>
-                    <span className="text-gray-500 dark:text-gray-50 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center pt-0">
+                    <span className="text-gray-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center pt-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
