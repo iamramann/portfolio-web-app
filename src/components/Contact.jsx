@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div className="container ">
       <div className="flex justify-center flex-col lg:w-3/6 mx-auto py-8">
-        <h1 className="text-center sm:text-3xl text-2xl font-medium title-font mb-4 text-slate-900 dark:text-white">
+        <h1 className="text-center sm:text-3xl text-2xl font-medium title-font mb-4 text-slate-900">
           Contact Me
         </h1>
         <div className="flex flex-wrap m-2">
@@ -22,7 +22,7 @@ function Contact() {
               placeholder="Enter your message..."
               id="message"
               name="message"
-              className="w-full bg-gray-100 dark:bg-white bg-opacity-50 rounded border border-gray-300 focus:border-gray-500 focus:bg-white focus:ring-2 focus:ring-gray-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-gray-500 focus:bg-white focus:ring-2 focus:ring-gray-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></textarea>
           </div>
           <div className="w-full py-2">

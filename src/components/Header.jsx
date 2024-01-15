@@ -5,10 +5,10 @@ function Header({ navItems }) {
   return (
     <>
       <header className="bg-slate-50 sticky top-0">
-        <nav className="relative top-0 p-4 lg:p-8 flex justify-between items-center bg-gray-100 dark:bg-slate-800">
+        <nav className="relative top-0 p-4 lg:p-8 flex justify-between items-center bg-gray-100">
           <Link href="/">
             <img src="###" alt="" />
-            <span className="ml-3 text-lg xl:text-2xl md:text-xxl  md:block cursor-pointer dark:text-white">
+            <span className="ml-3 text-lg xl:text-2xl md:text-xxl  md:block cursor-pointer">
               Raman Sharma
             </span>
           </Link>
@@ -30,7 +30,7 @@ function Header({ navItems }) {
             })}
           </ul>
           <Link to="/blog">
-            <span className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-3 px-6 bg-gray-900 dark:bg-gray-50  text-sm text-gray-50 dark:text-gray-900 100font-bold  rounded-xl transition duration-200">
+            <span className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-3 px-6 bg-gray-900 text-sm text-gray-50  100font-bold  rounded-xl transition duration-200">
               Read Blog
             </span>
           </Link>

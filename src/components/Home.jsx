@@ -5,7 +5,7 @@ function Home() {
     <>
       <div>
         <div className="container flex justify-center flex-row">
-          <div className=" w-4/6 p-5 px-8 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
+          <div className=" w-4/6 p-5 px-8 mx-auto bg-white rounded-lg shadow-md">
             <div className="section-1 mx-auto flex items-center flex-col p-5">
               <div className="max-w-xs profile-image">
                 <img
@@ -30,10 +30,8 @@ function Home() {
           <div>
             <div>
               <div className="section-1 flex-col mx-2">
-                <div className="p-5 px-8 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
-                  <h1 className="dark:text-gray-100 text-4xl mb-2">
-                    Working in
-                  </h1>
+                <div className="p-5 px-8 mx-auto bg-white rounded-lg shadow-md">
+                  <h1 className="text-4xl mb-2">Working in</h1>
                   <hr />
                   <div className="education">
                     <div className="my-1 p-2">
@@ -76,10 +74,8 @@ function Home() {
                     <hr />
                   </div>
                 </div>
-                <div className="p-5 my-2 px-8 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
-                  <h1 className="dark:text-gray-100 text-4xl mb-2">
-                    Education
-                  </h1>
+                <div className="p-5 my-2 px-8 mx-auto bg-white rounded-lg shadow-md">
+                  <h1 className="text-4xl mb-2">Education</h1>
                   <hr />
                   <div className="education">
                     <div className="my-1 p-2">
@@ -169,8 +165,8 @@ function Home() {
         </div>
         <div>
           <div className="section-1 flex-col mx-2">
-            <div className="p-5 px-8 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
-              <h1 className="dark:text-gray-100 text-4xl mb-2">Education</h1>
+            <div className="p-5 px-8 mx-auto bg-white rounded-lg shadow-md">
+              <h1 className="text-4xl mb-2">Education</h1>
               <hr />
               <div className="education">
                 <div className="my-1 p-2">
@@ -250,10 +246,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full p-5 m-2 px-8 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
-          <h1 className="dark:text-gray-100 text-4xl mb-2">
-            Professional Experience
-          </h1>
+        <div className="w-full p-5 m-2 px-8 mx-auto bg-white rounded-lg shadow-md">
+          <h1 className="text-4xl mb-2">Professional Experience</h1>
           <hr />
           <div className="my-1 p-2">
             <h1 className="my-2 p-1 text-xl font-semibold">
