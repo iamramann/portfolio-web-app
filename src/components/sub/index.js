@@ -1,3 +1,3 @@
 import Input from "./Input";
-
-export { Input };
+import ProjectInfoCard from "./ProjectInfoCard";
+export { Input, ProjectInfoCard };
