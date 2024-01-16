@@ -32,7 +32,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="relative flex justify-center flex-col lg:w-3/6 mx-auto">
+      <div className="lg:relative flex justify-center flex-col lg:w-3/6 mx-auto">
         <div className="w-5/6 mx-auto lg:w-full border-2 h-0"></div>
         <p className="text-center   text-gray-700 text-md lg:text-md">
           or send me direct email at

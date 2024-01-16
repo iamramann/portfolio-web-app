@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { mapTechnologiesColor } from "../../../constants";
-console.log(mapTechnologiesColor);
 function ProjectInfoCard({ project }) {
   const { id, name, purpose, contributions, technologies, projectLink } =
     project;
 
   return (
     <>
-      <div className="w-full md:w-[40%] lg:w-[30%] m-5  ring-1 rounded">
-        <div className="w-full card-header bg-gray-900 p-4 rounded">
+      <div className="w-full md:w-[40%] lg:w-[30%] lg:m-0 m-5 rounded-lg shadow-md">
+        <div className="w-full card-header bg-gray-900 p-4">
           <div className="flex justify-between">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,17 +28,17 @@ function ProjectInfoCard({ project }) {
             <h1 className="text-white font-bold">{name}</h1>
           </div>
         </div>
-        <div className="card-info m-5 p-1 min-h-72">
-          <div className="project-heading ">
-            <h1 className="text-lg font-bold text-gray-800 "> {purpose}</h1>
+        <div className="m-3 p-1">
+          <div>
+            <h1 className="text-lg font-bold text-gray-800"> {purpose}</h1>
           </div>
-          <div className="project-other-details pt-5">
+          <div>
             <h1 className="mt-2 mb-2 text-xl">Project Contributions</h1>
-            <div className="">
+            <div>
               {contributions.map((contribution, index) => {
                 return (
                   <div key={`contribution-${id + index}`}>
-                    <span className="text-gray-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center pt-0">
+                    <span className="text-gray-500 w-4 mr-2 rounded-full inline-flex items-center justify-center pt-0">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -59,9 +58,9 @@ function ProjectInfoCard({ project }) {
             </div>
           </div>
         </div>
-        <div className="technologies m-5 p-1 min-h-28">
+        <div className="m-3 p-1">
           <h1 className="text-lg font-bold text-gray-800 "> Technologies</h1>
-          <div className="tech-used flex flex-wrap">
+          <div className="flex flex-wrap">
             {technologies.map((technology, index) => {
               return (
                 <nav
@@ -83,7 +82,7 @@ function ProjectInfoCard({ project }) {
           </div>
         </div>
         <hr />
-        <div className="demo-link ml-5 m-2 p-1 flex">
+        <div className="ml-3 m-2 p-1 flex">
           &nbsp;
           <span>
             {projectLink ? (
