@@ -7,7 +7,7 @@ function ProjectInfoCard({ project }) {
 
   return (
     <>
-      <div className="w-full md:w-[40%] lg:w-[30%] lg:m-0 m-5 rounded-lg shadow-md">
+      <div className="w-5/6 md:mx-0 lg:mx-auto md:w-[42%] lg:w-[30%] rounded-lg shadow-md mb-5">
         <div className="w-full card-header bg-gray-900 p-4">
           <div className="flex justify-between">
             <svg
