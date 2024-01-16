@@ -7,8 +7,8 @@ function ProjectInfoCard({ project }) {
 
   return (
     <>
-      <div className="w-5/6 md:mx-0 lg:mx-auto md:w-[42%] lg:w-[30%] rounded-lg shadow-md mb-5">
-        <div className="w-full card-header bg-gray-900 p-4">
+      <div className="w-5/6 md:mx-0 lg:mx-auto md:w-[42%] lg:w-[30%] rounded-b-lg shadow-xl mb-5 hover:outline outline-2 hover:outline-gray-200">
+        <div className="bg-gray-900 p-4">
           <div className="flex justify-between">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ function ProjectInfoCard({ project }) {
             <div>
               {contributions.map((contribution, index) => {
                 return (
-                  <div key={`contribution-${id + index}`}>
+                  <div className="mb-2" key={`contribution-${id + index}`}>
                     <span className="text-gray-500 w-4 mr-2 rounded-full inline-flex items-center justify-center pt-0">
                       <svg
                         fill="none"
@@ -59,7 +59,7 @@ function ProjectInfoCard({ project }) {
           </div>
         </div>
         <div className="m-3 p-1">
-          <h1 className="text-lg font-bold text-gray-800 "> Technologies</h1>
+          <h1 className="text-lg font-bold text-gray-800">Technologies</h1>
           <div className="flex flex-wrap">
             {technologies.map((technology, index) => {
               return (

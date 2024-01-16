@@ -25,9 +25,6 @@ function Header({ navItems }) {
                 return (
                   <li key={name}>
                     <NavLink
-                      onClick={() => {
-                        console.log(111);
-                      }}
                       to={slug}
                       className={({ isActive }) =>
                         `font-medium px-3 py-2 text-slate-700 rounded hover:border-b-4 hover:border-b-gray-900 hover:text-slate-900 
@@ -81,6 +78,9 @@ function Header({ navItems }) {
                         <li key={name} className="mb-1">
                           <span className="block p-4 text-sm text-gray-400 font-semibold rounded">
                             <NavLink
+                              onClick={() => {
+                                setIsSideMenuOpen((prev) => !prev);
+                              }}
                               to={slug}
                               className={({ isActive }) =>
                                 `font-medium px-3 py-2 rounded   
