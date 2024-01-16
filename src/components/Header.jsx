@@ -60,7 +60,7 @@ function Header({ navItems }) {
                     className="mr-auto text-3xl font-bold leading-none flex align-center"
                     href="/"
                   >
-                    <span className="ml-3 text-lg xl:text-2xl md:text-xxl  md:block cursor-pointer dark:text-white">
+                    <span className="ml-3 text-lg xl:text-2xl md:text-xxl  md:block cursor-pointer">
                       Raman Sharma
                     </span>
                   </a>
@@ -75,7 +75,7 @@ function Header({ navItems }) {
                     {navItems.map(({ name, slug }) => {
                       return (
                         <li key={name} className="mb-1">
-                          <span className="block p-4 text-sm text-gray-400 dark:text-gray-400 font-semibold rounded">
+                          <span className="block p-4 text-sm text-gray-400 font-semibold rounded">
                             <NavLink
                               to={slug}
                               className={({ isActive }) =>
