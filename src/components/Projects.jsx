@@ -5,10 +5,12 @@ import { projects as projectInfo } from "../../constants";
 function Projects() {
   return (
     <>
-      <div className="flex flex-wrap gap-5 justify-between">
-        {projectInfo.map((project) => {
-          return <ProjectInfoCard key={project.id} project={project} />;
-        })}
+      <div className="mx-auto w-full lg:w-5/6 mt-5">
+        <div className="flex flex-wrap gap-5 justify-evenly mx-auto">
+          {projectInfo.map((project) => {
+            return <ProjectInfoCard key={project.id} project={project} />;
+          })}
+        </div>
       </div>
     </>
   );

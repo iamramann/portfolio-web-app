@@ -11,14 +11,25 @@ import { GithubSvg, HackerrankSvg, LinkedInSvg } from "./svg/Icons";
 function About() {
   return (
     <>
-      <div className="container flex justify-center flex-col lg:flex-row mx-auto">
+      <div className="container lg:w-5/6 flex justify-center flex-col lg:flex-row mx-auto">
         <div className="w-full lg:w-4/6 p-5 mx-auto bg-white">
           <div className="mx-auto p-5 rounded-lg shadow-md">
             <h1 className="font-semibold text-lg lg:text-4xl mb-2 w-full">
               About
             </h1>
             <hr />
-            <div className="profile-image flex justify-center w-full">
+            <div className="flex flex-wrap justify-center">
+              <div className="w-6/12 sm:w-4/12 px-4">
+                <img
+                  src={assetReferences.pic1}
+                  width={215}
+                  height={215}
+                  alt="..."
+                  className="shadow rounded-full max-w-full h-auto align-middle border-none"
+                />
+              </div>
+            </div>
+            {/* <div className="profile-image flex justify-center w-full">
               <img
                 src={assetReferences.pic}
                 alt=""
@@ -26,7 +37,8 @@ function About() {
                 height={125}
                 className="rounded-full"
               />
-            </div>
+            </div> */}
+
             <div className="about-me p-5">
               <h1 className="text-center">{aboutMeText}</h1>
             </div>

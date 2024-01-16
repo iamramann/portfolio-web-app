@@ -1,6 +1,8 @@
 import BeboLogo from "./src/images/bebo_logo.jpg";
 import KukLogo from "./src/images/kuk_logo.png";
-import pic from "./src/images/pic.jpg";
+import Pic from "./src/images/pic.jpg";
+import Pic1 from "./src/images/pic-1.jpg";
+import BgImg from "./src/images/bg-img.jpg";
 
 export const projects = [
   {
@@ -148,9 +150,11 @@ export const mapTechnologiesColor = {
 };
 
 export const assetReferences = {
-  pic: pic,
+  pic: Pic,
   kukLogo: KukLogo,
   beboLogo: BeboLogo,
+  pic1: Pic1,
+  bgImg: BgImg,
 };
 
 export const educationDetails = [

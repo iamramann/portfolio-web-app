@@ -3,7 +3,7 @@ import { Input } from "./sub";
 
 function Contact() {
   return (
-    <div className="container ">
+    <div className="container mx-auto">
       <div className="flex justify-center flex-col lg:w-3/6 mx-auto py-8">
         <h1 className="text-center sm:text-3xl text-2xl font-medium title-font mb-4 text-slate-900">
           Contact Me
