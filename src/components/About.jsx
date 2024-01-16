@@ -14,7 +14,7 @@ function About() {
       <div className="container flex justify-center flex-col lg:flex-row mx-auto">
         <div className="w-full lg:w-4/6 p-5 mx-auto bg-white">
           <div className="mx-auto p-5 rounded-lg shadow-md">
-            <h1 className="font-semibold text-sm lg:text-4xl mb-2 w-full">
+            <h1 className="font-semibold text-lg lg:text-4xl mb-2 w-full">
               About
             </h1>
             <hr />

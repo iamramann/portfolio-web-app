@@ -13,7 +13,7 @@ function Input({ label, className = "", type = "text", ...props }) {
             {label}
           </label>
         )}
-        <div className="relative mt-2 rounded-md shadow-sm">
+        <div className="lg:relative mt-2 rounded-md shadow-sm">
           <input
             type={type}
             id={id}

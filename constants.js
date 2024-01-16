@@ -142,8 +142,8 @@ export const mapTechnologiesColor = {
   RTK: ["bg-purple-50", "text-purple-600"],
   Heroku: ["bg-purple-50", "text-purple-600"],
   Bootstrap: ["bg-purple-50", "text-purple-600"],
-  TailwindCSS: ["bg-sky-50", "text-sky-400"],
-  CSS: ["bg-sky-50", "text-sky-400"],
+  TailwindCSS: ["bg-sky-50", "text-sky-600"],
+  CSS: ["bg-sky-50", "text-sky-600"],
   defaultColor: ["bg-sky-50", "text-sky-600"],
 };
 
@@ -189,4 +189,4 @@ export const aboutMeText =
   "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, expedita repellendus, maiores quasi perspiciatis, amet officia cupiditate eligendi praesentium ad omnis quos sit porro dicta accusamus quas non possimus neque?";
 
 export const disclaimerText =
-  "Disclaimer: The images used on this website are not owned by me. All images are the property of their respective owners. We do not claim ownership of these images and acknowledge the ntellectual property rights of the original creators.";
+  "Disclaimer: The images* used on this website are not owned by me. All images* are the property of their respective owners. I do not claim ownership of these images and acknowledge the intellectual property rights of the original creators.";
