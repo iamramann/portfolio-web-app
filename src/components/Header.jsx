@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Bars3Svg, XMarkSvg } from "./svg/Icons";
+import { Bars3Svg, CodeSvg, XMarkSvg } from "./svg/Icons";
 
 function Header({ navItems }) {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
@@ -14,9 +14,9 @@ function Header({ navItems }) {
       <header className="bg-slate-50 sticky top-0">
         <nav className="relative top-0 p-4 lg:p-8  bg-gray-100">
           <div className="flex justify-between items-center">
-            <Link href="/">
-              <img src="###" alt="" />
-              <span className="ml-3 text-lg xl:text-2xl md:text-xxl  md:block cursor-pointer">
+            <Link className="flex items-center">
+              <CodeSvg />
+              <span className="ml-3 text-lg xl:text-2xl md:text-xxl font-bold md:block cursor-pointer">
                 Raman Sharma
               </span>
             </Link>
@@ -25,6 +25,9 @@ function Header({ navItems }) {
                 return (
                   <li key={name}>
                     <NavLink
+                      onClick={() => {
+                        console.log(111);
+                      }}
                       to={slug}
                       className={({ isActive }) =>
                         `font-medium px-3 py-2 text-slate-700 rounded hover:border-b-4 hover:border-b-gray-900 hover:text-slate-900 
@@ -60,6 +63,7 @@ function Header({ navItems }) {
                     className="mr-auto text-3xl font-bold leading-none flex align-center"
                     href="/"
                   >
+                    <CodeSvg />
                     <span className="ml-3 text-lg xl:text-2xl md:text-xxl  md:block cursor-pointer">
                       Raman Sharma
                     </span>
