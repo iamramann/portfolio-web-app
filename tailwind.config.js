@@ -8,7 +8,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
   safelist: [
     "bg-sky-50",
     "text-sky-600",
