@@ -18,7 +18,7 @@ function Home() {
             </div>
 
             <div className="mt-5 w-full">
-              <article className=" prose prose-sm md:prose-lg xl:prose-xl 2xl:prose-2xl text-center dark:text-white">
+              <article className="text-center dark:text-white">
                 <h1 className="text-center text-white text-3xl lg:text-7xl">
                   Hi, I'm Raman Sharma
                 </h1>
