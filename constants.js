@@ -111,13 +111,13 @@ export const navItems = [
     active: true,
   },
   {
-    name: "About",
-    slug: "/about",
+    name: "Portfolio",
+    slug: "/portfolio",
     active: false,
   },
   {
-    name: "Portfolio",
-    slug: "/portfolio",
+    name: "About",
+    slug: "/about",
     active: false,
   },
   {
