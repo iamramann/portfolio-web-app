@@ -7,7 +7,7 @@ function ProjectInfoCard({ project }) {
 
   return (
     <>
-      <div className="w-5/6 md:mx-0 lg:mx-auto md:w-[42%] lg:w-[30%] rounded-b-lg shadow-xl mb-5 hover:outline outline-2 hover:outline-gray-200">
+      <div className="w-5/6 mx-auto lg:mx-0 m-2 md:mx-0 md:w-[42%] lg:w-[30%] rounded-b-lg shadow-xl hover:outline outline-2 hover:outline-gray-200 cursor-pointer">
         <div className="bg-gray-900 p-4">
           <div className="flex justify-between">
             <svg
@@ -35,50 +35,52 @@ function ProjectInfoCard({ project }) {
           <div>
             <h1 className="mt-2 mb-2 text-xl">Project Contributions</h1>
             <div>
-              {contributions.map((contribution, index) => {
-                return (
-                  <div className="mb-2" key={`contribution-${id + index}`}>
-                    <span className="text-gray-500 w-4 mr-2 rounded-full inline-flex items-center justify-center pt-0">
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="3"
-                        className="w-3 h-3"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M20 6L9 17l-5-5"></path>
-                      </svg>
-                    </span>
-                    {contribution}
-                  </div>
-                );
-              })}
+              {contributions &&
+                contributions.map((contribution, index) => {
+                  return (
+                    <div className="mb-2" key={`contribution-${id + index}`}>
+                      <span className="text-gray-500 w-4 mr-2 rounded-full inline-flex items-center justify-center pt-0">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="3"
+                          className="w-3 h-3"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M20 6L9 17l-5-5"></path>
+                        </svg>
+                      </span>
+                      {contribution}
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </div>
         <div className="m-3 p-1">
           <h1 className="text-lg font-bold text-gray-800">Technologies</h1>
           <div className="flex flex-wrap">
-            {technologies.map((technology, index) => {
-              return (
-                <nav
-                  key={`technology-${id + index}`}
-                  className={`text-xs mr-2 py-1.5 px-4 my-1 text-black-600 rounded-2xl font-semibold ${
-                    (mapTechnologiesColor[technology] &&
-                      mapTechnologiesColor[technology][0]) ||
-                    mapTechnologiesColor["defaultColor"][0]
-                  } ${
-                    (mapTechnologiesColor[technology] &&
-                      mapTechnologiesColor[technology][1]) ||
-                    mapTechnologiesColor["defaultColor"][1]
-                  }`}
-                >
-                  {technology}
-                </nav>
-              );
-            })}
+            {technologies &&
+              technologies.map((technology, index) => {
+                return (
+                  <nav
+                    key={`technology-${id + index}`}
+                    className={`text-xs mr-2 py-1.5 px-4 my-1 text-black-600 rounded-2xl font-semibold ${
+                      (mapTechnologiesColor[technology] &&
+                        mapTechnologiesColor[technology][0]) ||
+                      mapTechnologiesColor["defaultColor"][0]
+                    } ${
+                      (mapTechnologiesColor[technology] &&
+                        mapTechnologiesColor[technology][1]) ||
+                      mapTechnologiesColor["defaultColor"][1]
+                    }`}
+                  >
+                    {technology}
+                  </nav>
+                );
+              })}
           </div>
         </div>
         <hr />
