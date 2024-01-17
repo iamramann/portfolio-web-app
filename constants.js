@@ -27,6 +27,18 @@ import {
 
 export const projects = [
   {
+    id: 7,
+    name: "Portfolio Application",
+    purpose: "React based portfolio application",
+    contributions: [
+      "Integrating free currency API and performing real time currency conversion",
+      "Design using tailwind",
+      "Deployed the project to google firebase",
+    ],
+    technologies: ["React"],
+    projectLink: "https://github.com/iamramann/cqkart",
+  },
+  {
     id: 1,
     name: "Blog Application",
     purpose: "Blog application with appwrite backend",
@@ -52,8 +64,51 @@ export const projects = [
     projectLink: "https://currency-convertor-9a4f8.firebaseapp.com/",
   },
   {
+    id: 6,
+    name: "Photo Sharing Application",
+    purpose: "React based photo sharing application",
+    contributions: [
+      "Integrating free currency API and performing real time currency conversion",
+      "Design using tailwind",
+      "Deployed the project to google firebase",
+    ],
+    technologies: ["React"],
+    projectLink: "https://github.com/iamramann/cqkart",
+  },
+  {
+    id: 5,
+    name: "Plasma Donor App",
+    purpose: "React based plasma donor application",
+    contributions: [
+      "Integrating free currency API and performing real time currency conversion",
+      "Design using tailwind",
+      "Deployed the project to google firebase",
+    ],
+    technologies: ["React"],
+    projectLink: "https://github.com/iamramann/cqkart",
+  },
+  {
     id: 3,
     name: "HousingVousing",
+    purpose: "Angular based rental property management system",
+    contributions: [
+      "Integrating free currency API and performing real time currency conversion",
+      "Design using tailwind",
+      "Deployed the project to google firebase",
+    ],
+    technologies: [
+      "Angular",
+      "Dotnet",
+      "SQLServer",
+      "Bootstrap",
+      "Firebase",
+      "Azure",
+    ],
+    projectLink: "https://housingvousing.com/",
+  },
+  {
+    id: 3,
+    name: "HousingVousing WebAPI",
     purpose: "Angular based rental property management system",
     contributions: [
       "Integrating free currency API and performing real time currency conversion",
@@ -87,42 +142,6 @@ export const projects = [
       "ExpressJs",
       "Heroku",
     ],
-    projectLink: "https://github.com/iamramann/cqkart",
-  },
-  {
-    id: 5,
-    name: "Plasma Donor App",
-    purpose: "React based plasma donor application",
-    contributions: [
-      "Integrating free currency API and performing real time currency conversion",
-      "Design using tailwind",
-      "Deployed the project to google firebase",
-    ],
-    technologies: ["React"],
-    projectLink: "https://github.com/iamramann/cqkart",
-  },
-  {
-    id: 6,
-    name: "Photo Sharing Application",
-    purpose: "React based photo sharing application",
-    contributions: [
-      "Integrating free currency API and performing real time currency conversion",
-      "Design using tailwind",
-      "Deployed the project to google firebase",
-    ],
-    technologies: ["React"],
-    projectLink: "https://github.com/iamramann/cqkart",
-  },
-  {
-    id: 7,
-    name: "Portfolio Application",
-    purpose: "React based portfolio application",
-    contributions: [
-      "Integrating free currency API and performing real time currency conversion",
-      "Design using tailwind",
-      "Deployed the project to google firebase",
-    ],
-    technologies: ["React"],
     projectLink: "https://github.com/iamramann/cqkart",
   },
 ];
@@ -263,6 +282,7 @@ export const backendTechnologies = [
     logo: SSMSSvg,
   },
 ];
+
 export const projectManagementTools = [
   {
     name: "GIT",

@@ -7,7 +7,7 @@ function Home() {
       <div className="bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r w-screen">
         <div className={`h-screen flex justify-center`}>
           <div className="flex flex-wrap justify-center mt-0 lg:mt-5 lg:justify-start flex-col items-center">
-            <div className="w-6/12 sm:w-4/12   flex justify-center">
+            <div className="w-6/12 sm:w-4/12 flex justify-center">
               <img
                 src={assetReferences.pic1}
                 width={215}

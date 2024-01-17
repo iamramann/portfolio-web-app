@@ -15,11 +15,11 @@ import { DownSvg, UpSvg } from "../images/svg";
 function About() {
   const [isFrontendTechVisible, setIsFrontendTechVisible] = useState(true);
   const [isBackendTechVisible, setIsBackendTechVisible] = useState(false);
-  const [isPMTechVisible, setIsPMTechVisible] = useState(false);
+  const [isPMToolsVisible, setIsPMToolsVisible] = useState(false);
 
   return (
     <>
-      <div className="container lg:w-5/6 gap-0  flex justify-center flex-col lg:flex-row mx-auto prose-h3:text-lg prose-h2:text-xl prose-h1:text-3xl">
+      <div className="container lg:w-5/6 gap-0 flex justify-center flex-col lg:flex-row mx-auto prose-h3:text-lg prose-h2:text-xl prose-h1:text-3xl">
         <div className="w-full lg:w-4/6 p-5 px-3 mx-auto bg-white order-2">
           <div className="mx-auto p-5 rounded-lg shadow-lg">
             <h1 className="prose font-semibold mb-2 w-full">
@@ -288,14 +288,14 @@ function About() {
               <div
                 className="my-2  bg-gray-50 p-1 flex justify-between"
                 onClick={() => {
-                  setIsPMTechVisible((prev) => !prev);
+                  setIsPMToolsVisible((prev) => !prev);
                 }}
               >
                 <h2 className="prose prose-stone font-semibold">
                   Project Management Tools
                 </h2>
                 <img
-                  src={!isPMTechVisible ? DownSvg : UpSvg}
+                  src={!isPMToolsVisible ? DownSvg : UpSvg}
                   alt=""
                   className="w-8 h-8 cursor-pointer"
                 />
@@ -304,7 +304,7 @@ function About() {
               <div
                 className="w-full grid grid-cols-2 lg:grid-cols-3"
                 style={{
-                  display: isPMTechVisible ? "grid" : "none",
+                  display: isPMToolsVisible ? "grid" : "none",
                 }}
               >
                 {projectManagementTools.map((item) => (
