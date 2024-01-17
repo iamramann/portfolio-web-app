@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="h-screen w-full container-snap">
         <Header navItems={navItems} />
-        <main className="min-h-[94%] overflow-hidden ">
+        <main className="min-h-[94%] overflow-hidden">
           <Outlet />
         </main>
         <Footer />
