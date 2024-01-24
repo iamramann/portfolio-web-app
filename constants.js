@@ -1,5 +1,6 @@
 import BeboLogo from "./src/images/bebo_logo.jpg";
 import KukLogo from "./src/images/kuk_logo.png";
+import SDLogo from "./src/images/sd_logo_1.png";
 import Pic from "./src/images/pic.jpg";
 import Pic1 from "./src/images/pic-1.jpg";
 import BgImg from "./src/images/bg-img.jpg";
@@ -185,6 +186,7 @@ export const assetReferences = {
   beboLogo: BeboLogo,
   pic1: Pic1,
   bgImg: BgImg,
+  sdLogo: SDLogo,
 };
 
 export const educationDetails = [
@@ -199,7 +201,7 @@ export const educationDetails = [
   },
   {
     type: "Graduation",
-    logo: assetReferences.kukLogo,
+    logo: assetReferences.sdLogo,
     instituteName: "Sanatan Dharma College (2014-2017)",
     courseName: "B.Sc. (Information Technology)",
     marks: "75.56%",
@@ -214,7 +216,15 @@ export const workExperienceDetails = [
     jobDescription:
       "As a software engineer, I design, develop, and test cutting-edge software solutions, collaborating seamlessly with cross-functional teams to meet project requirements. My responsibilities extend to system architecture, where I contribute to the design of scalable and efficient software systems.",
     position: "Software Engineer",
-    joinedOn: "January 31, 2022",
+    joinedOn: "March 17, 2022 - Present",
+    logo: assetReferences.beboLogo,
+  },
+  {
+    companyName: "Bebo Technologies Pvt. Ltd.",
+    jobDescription:
+      "As a software engineer, I design, develop, and test cutting-edge software solutions, collaborating seamlessly with cross-functional teams to meet project requirements. My responsibilities extend to system architecture, where I contribute to the design of scalable and efficient software systems.",
+    position: "Trainee",
+    joinedOn: "January 31, 2022 - March 17, 2022",
     logo: assetReferences.beboLogo,
   },
 ];
