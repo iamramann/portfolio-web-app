@@ -64,7 +64,7 @@ export default function AboutNew() {
     <>
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 p-5">
-          <div className="lg:col-span-1 lg:p-5 flex items-center">
+          <div className="lg:col-span-1 lg:p-5">
             <Card className="lg:w-96">
               <CardHeader floated={false} className="h-80">
                 <img src={assetReferences.pic1} alt="profile-picture" />
@@ -129,7 +129,6 @@ export default function AboutNew() {
                                 size="sm"
                                 src={assetReferences.beboLogo}
                                 alt="user 1"
-                                withBorder
                               />
                             </TimelineIcon>
                             <Typography variant="h5" color="blue-gray">
