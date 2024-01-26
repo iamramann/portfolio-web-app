@@ -3,7 +3,16 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Home, About, NotFound, Contact, Projects } from "./components";
+import {
+  Home,
+  // About,
+  NotFound,
+  Contact,
+  Projects,
+  AboutNew,
+  ContactNew,
+} from "./components";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const router = createBrowserRouter([
   {
@@ -20,11 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: <AboutNew />,
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: <ContactNew />,
       },
       {
         path: "/portfolio",
@@ -40,6 +49,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
