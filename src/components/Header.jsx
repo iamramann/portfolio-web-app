@@ -14,7 +14,7 @@ function Header({ navItems }) {
 
   return (
     <>
-      <header className="bg-slate-50 sticky top-0 shadow-xl dark:border-b-2 border-slate-700">
+      <header className="bg-slate-50 shadow-xl dark:border-b-2 border-slate-700">
         <nav className="relative top-0 p-4 lg:p-6 bg-gray-100 dark:bg-slate-950">
           <div className="flex justify-between items-center">
             <Link className="flex items-center">
