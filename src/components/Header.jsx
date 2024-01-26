@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Bars3Svg, CodeSvg, XMarkSvg } from "./svg/Icons";
+import { Bars3Svg, CodeSvg, DaySvg, NightSvg, XMarkSvg } from "./svg/Icons";
+import { BtnSub } from "./sub";
+import useTheme from "../contexts/theme";
 
 function Header({ navItems }) {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
+  const { themeMode, lightTheme, darkTheme } = useTheme();
 
   function toggleSidebar(e) {
     setIsSideMenuOpen((prev) => !prev);
@@ -11,12 +14,12 @@ function Header({ navItems }) {
 
   return (
     <>
-      <header className="bg-slate-50">
-        <nav className="relative top-0 p-4 lg:p-8  bg-gray-100">
+      <header className="bg-slate-50 sticky top-0 shadow-xl dark:border-b-2 border-slate-700">
+        <nav className="relative top-0 p-4 lg:p-6 bg-gray-100 dark:bg-slate-950">
           <div className="flex justify-between items-center">
             <Link className="flex items-center">
               <CodeSvg />
-              <span className="ml-3 text-lg xl:text-2xl md:text-xxl font-bold md:block cursor-pointer">
+              <span className="ml-3 text-lg xl:text-2xl md:text-xxl font-bold md:block cursor-pointer dark:text-white">
                 Raman Sharma
               </span>
             </Link>
@@ -27,8 +30,8 @@ function Header({ navItems }) {
                     <NavLink
                       to={slug}
                       className={({ isActive }) =>
-                        `font-medium px-3 py-2 text-slate-700 rounded hover:border-b-4 hover:border-b-gray-900 hover:text-slate-900 
-											${isActive ? "border-b-4 border-b-gray-900" : ""}`
+                        `font-bold px-3 py-2 dark:text-slate-700 rounded hover:border-b-4 hover:border-b-slate-700 hover:text-slate-900 
+											${isActive ? "border-b-4 border-b-gray-900 dark:border-b-slate-700" : ""}`
                       }
                     >
                       {name}
@@ -37,15 +40,39 @@ function Header({ navItems }) {
                 );
               })}
             </ul>
-            <Link to="/blog">
-              <span className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-3 px-6 bg-gray-900 text-sm text-gray-50  100font-bold  rounded-xl transition duration-200">
-                Read Blog
+            {themeMode === "dark" ? (
+              <span className="mx-2">
+                <DaySvg
+                  className="text-white cursor-pointer"
+                  toggleTheme={lightTheme}
+                />
               </span>
+            ) : (
+              <span className="mx-2">
+                <NightSvg
+                  className="text-dark cursor-pointer"
+                  toggleTheme={darkTheme}
+                />
+              </span>
+            )}
+
+            <Link to="#">
+              {/* <span
+                className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-3 px-6 bg-slate-700 text-sm text-slate-700  font-bold rounded-xl
+              hover:scale-105 dark:text-white border-2 border-slate-600 hover:bg-slate-900"
+              >
+                Read Blog
+              </span> */}
+              <BtnSub className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-4 hover:scale-105">
+                <span className="text-sm text-white dark:text-white font-bold">
+                  Read Blog
+                </span>
+              </BtnSub>
             </Link>
             <div>
               {!isSideMenuOpen ? (
                 <Bars3Svg
-                  className="cursor-pointer lg:hidden"
+                  className="cursor-pointer lg:hidden dark:text-white"
                   toggleSidebar={toggleSidebar}
                 />
               ) : null}
@@ -54,20 +81,20 @@ function Header({ navItems }) {
           {isSideMenuOpen ? (
             <div className="navbar-menu relative z-50 lg:hidden">
               <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-              <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+              <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white dark:bg-slate-700 border-r border-r-slate-700 overflow-y-auto">
                 <div className="flex items-center mb-8">
                   <a
-                    className="mr-auto text-3xl font-bold leading-none flex align-center"
+                    className="mr-auto text-3xl font-bold leading-none flex align-center dark:text-white"
                     href="/"
                   >
                     <CodeSvg />
-                    <span className="ml-3 text-lg xl:text-2xl md:text-xxl md:block cursor-pointer">
+                    <span className="ml-3 text-lg xl:text-2xl md:text-xxl md:block cursor-pointer dark:text-white">
                       Raman Sharma
                     </span>
                   </a>
 
                   <XMarkSvg
-                    className="cursor-pointer lg:hidden"
+                    className="cursor-pointer lg:hidden dark:text-white"
                     toggleSidebar={toggleSidebar}
                   />
                 </div>
@@ -83,10 +110,8 @@ function Header({ navItems }) {
                               }}
                               to={slug}
                               className={({ isActive }) =>
-                                `font-medium px-3 py-2 rounded   
-                                ${
-                                  isActive ? "text-slate-900" : "text-slate-400"
-                                }`
+                                `font-bold px-3 py-2 rounded   
+                                ${isActive ? "text-slate-950" : ""}`
                               }
                             >
                               {name}

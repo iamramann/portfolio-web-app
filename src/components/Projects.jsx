@@ -1,15 +1,21 @@
 import React from "react";
-import { ProjectInfoCard } from "./sub";
+import { ProjectInfoCard, ProjectInfoCardNew } from "./sub";
 import { projects as projectInfo } from "../../constants";
 
 function Projects() {
   return (
     <>
-      <div className="mx-auto w-full lg:w-5/6 mt-5">
-        <div className="flex flex-wrap gap-5 justify-evenly">
-          {projectInfo.map((project) => {
-            return <ProjectInfoCard key={project.id} project={project} />;
-          })}
+      <div className="mx-auto w-full lg:w-5/6 m-[120px]">
+        <div className="mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4">
+            {projectInfo.map((project) => {
+              return (
+                <div key={project.id} className="flex justify-center">
+                  <ProjectInfoCard project={project} />;
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>

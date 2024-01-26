@@ -110,7 +110,6 @@ export const projects = [
     ],
     projectLink: "https://housingvousing.com/",
   },
-
   {
     id: 4,
     name: "CQKart",
@@ -159,11 +158,11 @@ export const navItems = [
 ];
 
 export const mapTechnologiesColor = {
-  React: ["bg-sky-50", "text-sky-600"],
-  Angular: ["bg-rose-50", "text-rose-600"],
-  HTML: ["bg-rose-50", "text-rose-600"],
-  ExpressJs: ["bg-rose-50", "text-rose-600"],
-  Dotnet: ["bg-indigo-50", "text-indigo-600"],
+  React: ["bg-indigo-100", "text-indigo-600"],
+  Angular: ["bg-orange-50", "text-orange-600"],
+  HTML: ["bg-orange-50", "text-orange-600"],
+  ExpressJs: ["bg-orange-50", "text-orange-600"],
+  Dotnet: ["bg-indigo-100", "text-indigo-600"],
   SQLServer: ["bg-yellow-50", "text-yellow-600"],
   Javascript: ["bg-yellow-50", "text-yellow-600"],
   Firebase: ["bg-orange-50", "text-orange-600"],
@@ -173,11 +172,11 @@ export const mapTechnologiesColor = {
   RTK: ["bg-purple-50", "text-purple-600"],
   Heroku: ["bg-purple-50", "text-purple-600"],
   Bootstrap: ["bg-purple-50", "text-purple-600"],
-  TailwindCSS: ["bg-sky-50", "text-sky-600"],
-  CSS: ["bg-sky-50", "text-sky-600"],
+  TailwindCSS: ["bg-indigo-100", "text-indigo-600"],
+  CSS: ["bg-indigo-100", "text-indigo-600"],
   Vercel: ["bg-gray-50", "text-gray-600"],
   Stripe: ["bg-gray-50", "text-blue-600"],
-  defaultColor: ["bg-sky-50", "text-sky-600"],
+  defaultColor: ["bg-indigo-100", "text-indigo-600"],
 };
 
 export const assetReferences = {

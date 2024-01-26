@@ -10,6 +10,7 @@ import {
   Contact,
   Projects,
   AboutNew,
+  ContactNew,
 } from "./components";
 import { ThemeProvider } from "@material-tailwind/react";
 
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: <ContactNew />,
       },
       {
         path: "/portfolio",

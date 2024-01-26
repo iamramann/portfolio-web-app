@@ -62,20 +62,24 @@ export default function AboutNew() {
 
   return (
     <>
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 p-5">
-          <div className="lg:col-span-1 lg:p-5">
-            <Card className="lg:w-96">
+      <div className="m-[80px] lg:my-0 lg:h-dvh container mx-auto flex items-center">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 p-5">
+          <div className="lg:col-span-1 lg:p-5 dark:bg-slate-950">
+            <Card className="lg:w-96 dark:bg-slate-900 mt-5">
               <CardHeader floated={false} className="h-80">
                 <img src={assetReferences.pic1} alt="profile-picture" />
               </CardHeader>
               <CardBody className="text-center">
-                <Typography variant="h4" color="blue-gray" className="mb-2">
+                <Typography
+                  variant="h4"
+                  color="blue-gray"
+                  className="mb-2 dark:text-white"
+                >
                   Raman Sharma
                 </Typography>
                 <Typography
                   color="blue-gray"
-                  className="font-medium"
+                  className="font-medium dark:text-white"
                   textGradient
                 >
                   Software Engineer
@@ -83,7 +87,7 @@ export default function AboutNew() {
                 <div className="flex justify-center items-center">
                   <Link
                     to={"https://github.com/iamramann"}
-                    className="flex items-center text-sm me-5"
+                    className="flex items-center text-sm me-5 dark:text-white"
                   >
                     <span>
                       <GithubSvg />
@@ -91,7 +95,7 @@ export default function AboutNew() {
                   </Link>
                   <Link
                     to={"https://www.linkedin.com/in/iamramann/"}
-                    className="flex items-center text-sm me-5"
+                    className="flex items-center text-sm me-5 dark:text-white"
                   >
                     <span>
                       <LinkedInSvg />
@@ -99,7 +103,7 @@ export default function AboutNew() {
                   </Link>
                   <Link
                     to={"https://www.hackerrank.com/profile/hey_raman"}
-                    className="flex items-center text-sm me-2"
+                    className="flex items-center text-sm me-2 dark:text-white"
                   >
                     <span>
                       <HackerrankSvg />
@@ -109,10 +113,13 @@ export default function AboutNew() {
               </CardBody>
             </Card>
           </div>
-          <div className="lg:col-span-2 p-5">
+          <div className="lg:col-span-2 lg:p-5">
             <div className="w-full">
               <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-                <AccordionHeader onClick={() => handleOpen(1)}>
+                <AccordionHeader
+                  onClick={() => handleOpen(1)}
+                  className="dark:text-white"
+                >
                   Experience{" "}
                 </AccordionHeader>
                 <AccordionBody>
@@ -131,14 +138,18 @@ export default function AboutNew() {
                                 alt="user 1"
                               />
                             </TimelineIcon>
-                            <Typography variant="h5" color="blue-gray">
+                            <Typography
+                              variant="h6"
+                              color="blue-gray"
+                              className="dark:text-white lg:text-xl"
+                            >
                               {item.companyName}
                             </Typography>
                           </TimelineHeader>
                           <TimelineBody className="pb-8">
                             <Typography
                               color="gray"
-                              className="font-normal text-gray-600"
+                              className="font-normal dark:text-white"
                             >
                               <span className="grid">
                                 <p className="font-bold">{item.position}</p>
@@ -156,7 +167,10 @@ export default function AboutNew() {
                 </AccordionBody>
               </Accordion>
               <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-                <AccordionHeader onClick={() => handleOpen(2)}>
+                <AccordionHeader
+                  onClick={() => handleOpen(2)}
+                  className="dark:text-white"
+                >
                   Tools & Technologies
                 </AccordionHeader>
                 <AccordionBody>
@@ -164,7 +178,7 @@ export default function AboutNew() {
                     <div className="grid grid-cols-2 lg:grid-cols-1 border-b-2 lg:border-b-0">
                       {frontendTechnologies.map((item) => (
                         <div
-                          className="my-2 flex items-center justify-start py-2 mx-1"
+                          className="my-2 flex items-center justify-start py-2 mx-1 dark:text-white"
                           key={item.name}
                         >
                           <span>
@@ -177,7 +191,7 @@ export default function AboutNew() {
                     <div className="grid grid-cols-2 lg:grid-cols-1 border-b-2 lg:border-b-0">
                       {backendTechnologies.map((item) => (
                         <div
-                          className="my-2 flex items-center justify-start py-2 mx-1"
+                          className="my-2 flex items-center justify-start py-2 mx-1 dark:text-white"
                           key={item.name}
                         >
                           <span>
@@ -190,7 +204,7 @@ export default function AboutNew() {
                     <div className="grid lg:grid-cols-1  grid-cols-2 border-b-2 lg:border-b-0">
                       {projectManagementTools.map((item) => (
                         <div
-                          className="my-2 flex items-center justify-start py-2 mx-1"
+                          className="my-2 flex items-center justify-start py-2 mx-1 dark:text-white"
                           key={item.name}
                         >
                           <span>
@@ -204,7 +218,10 @@ export default function AboutNew() {
                 </AccordionBody>
               </Accordion>
               <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-                <AccordionHeader onClick={() => handleOpen(3)}>
+                <AccordionHeader
+                  onClick={() => handleOpen(3)}
+                  className="dark:text-white"
+                >
                   Education{" "}
                 </AccordionHeader>
                 <AccordionBody>
@@ -224,14 +241,18 @@ export default function AboutNew() {
                                 withBorder
                               />
                             </TimelineIcon>
-                            <Typography variant="h5" color="blue-gray">
+                            <Typography
+                              variant="h6"
+                              color="blue-gray"
+                              className="dark:text-white lg:text-xl"
+                            >
                               {item.instituteName}
                             </Typography>
                           </TimelineHeader>
                           <TimelineBody className="pb-8">
                             <Typography
                               color="gray"
-                              className="font-normal text-gray-600"
+                              className="font-normal text-gray-600 dark:text-white"
                             >
                               <span className="grid">
                                 <p className="font-bold">{item.courseName}</p>
