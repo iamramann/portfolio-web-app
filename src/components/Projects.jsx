@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectInfoCard, ProjectInfoCardNew } from "./sub";
+import { ProjectInfoCard } from "./sub";
 import { projects as projectInfo } from "../../constants";
 
 function Projects() {
