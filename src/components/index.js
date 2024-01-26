@@ -5,5 +5,17 @@ import NotFound from "./NotFound";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import AboutNew from "./AboutNew";
+import ContactNew from "./ContactNew";
 
-export { Header, Home, About, NotFound, Projects, Contact, Footer };
+export {
+  Header,
+  Home,
+  About,
+  NotFound,
+  Projects,
+  Contact,
+  Footer,
+  AboutNew,
+  ContactNew,
+};

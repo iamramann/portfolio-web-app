@@ -3,12 +3,12 @@ import { disclaimerText } from "../../constants";
 
 function Footer() {
   return (
-    <footer className="bg-slate-50">
-      <span className="pt-2 flex justify-center text-xs text-gray-400">
-        <p className="text-center mx-2 lg:mx-0">{disclaimerText}</p>
+    <footer className="dark:bg-slate-950">
+      <span className="flex justify-center text-sm dark:text-white">
+        <p className="text-center mx-2 lg:mx-0 text-xs">{disclaimerText}</p>
       </span>
       <div className="flex justify-center py-4">
-        <p className="text-sm lg:text-md font-semibold text-gray-700">
+        <p className="text-sm lg:text-md font-semibold dark:text-white">
           &copy; Raman Sharma All rights reserved.
         </p>
       </div>

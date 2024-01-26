@@ -1,5 +1,6 @@
 import BeboLogo from "./src/images/bebo_logo.jpg";
 import KukLogo from "./src/images/kuk_logo.png";
+import SDLogo from "./src/images/sd_logo_1.png";
 import Pic from "./src/images/pic.jpg";
 import Pic1 from "./src/images/pic-1.jpg";
 import BgImg from "./src/images/bg-img.jpg";
@@ -109,7 +110,6 @@ export const projects = [
     ],
     projectLink: "https://housingvousing.com/",
   },
-
   {
     id: 4,
     name: "CQKart",
@@ -158,11 +158,11 @@ export const navItems = [
 ];
 
 export const mapTechnologiesColor = {
-  React: ["bg-sky-50", "text-sky-600"],
-  Angular: ["bg-rose-50", "text-rose-600"],
-  HTML: ["bg-rose-50", "text-rose-600"],
-  ExpressJs: ["bg-rose-50", "text-rose-600"],
-  Dotnet: ["bg-indigo-50", "text-indigo-600"],
+  React: ["bg-indigo-100", "text-indigo-600"],
+  Angular: ["bg-orange-50", "text-orange-600"],
+  HTML: ["bg-orange-50", "text-orange-600"],
+  ExpressJs: ["bg-orange-50", "text-orange-600"],
+  Dotnet: ["bg-indigo-100", "text-indigo-600"],
   SQLServer: ["bg-yellow-50", "text-yellow-600"],
   Javascript: ["bg-yellow-50", "text-yellow-600"],
   Firebase: ["bg-orange-50", "text-orange-600"],
@@ -172,11 +172,11 @@ export const mapTechnologiesColor = {
   RTK: ["bg-purple-50", "text-purple-600"],
   Heroku: ["bg-purple-50", "text-purple-600"],
   Bootstrap: ["bg-purple-50", "text-purple-600"],
-  TailwindCSS: ["bg-sky-50", "text-sky-600"],
-  CSS: ["bg-sky-50", "text-sky-600"],
+  TailwindCSS: ["bg-indigo-100", "text-indigo-600"],
+  CSS: ["bg-indigo-100", "text-indigo-600"],
   Vercel: ["bg-gray-50", "text-gray-600"],
   Stripe: ["bg-gray-50", "text-blue-600"],
-  defaultColor: ["bg-sky-50", "text-sky-600"],
+  defaultColor: ["bg-indigo-100", "text-indigo-600"],
 };
 
 export const assetReferences = {
@@ -185,6 +185,7 @@ export const assetReferences = {
   beboLogo: BeboLogo,
   pic1: Pic1,
   bgImg: BgImg,
+  sdLogo: SDLogo,
 };
 
 export const educationDetails = [
@@ -199,7 +200,7 @@ export const educationDetails = [
   },
   {
     type: "Graduation",
-    logo: assetReferences.kukLogo,
+    logo: assetReferences.sdLogo,
     instituteName: "Sanatan Dharma College (2014-2017)",
     courseName: "B.Sc. (Information Technology)",
     marks: "75.56%",
@@ -214,7 +215,15 @@ export const workExperienceDetails = [
     jobDescription:
       "As a software engineer, I design, develop, and test cutting-edge software solutions, collaborating seamlessly with cross-functional teams to meet project requirements. My responsibilities extend to system architecture, where I contribute to the design of scalable and efficient software systems.",
     position: "Software Engineer",
-    joinedOn: "January 31, 2022",
+    joinedOn: "March 17, 2022 - Present",
+    logo: assetReferences.beboLogo,
+  },
+  {
+    companyName: "Bebo Technologies Pvt. Ltd.",
+    jobDescription:
+      "As a software engineer, I design, develop, and test cutting-edge software solutions, collaborating seamlessly with cross-functional teams to meet project requirements. My responsibilities extend to system architecture, where I contribute to the design of scalable and efficient software systems.",
+    position: "Trainee",
+    joinedOn: "January 31, 2022 - March 17, 2022",
     logo: assetReferences.beboLogo,
   },
 ];
