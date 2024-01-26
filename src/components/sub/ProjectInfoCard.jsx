@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { mapTechnologiesColor } from "../../../constants";
 function ProjectInfoCard({ project }) {
   const { id, name, purpose, contributions, technologies, projectLink } =
@@ -83,36 +82,6 @@ function ProjectInfoCard({ project }) {
               })}
           </div>
         </div>
-        {/* <div className="ml-3 m-2 p-1 flex">
-          &nbsp;
-          <span>
-            {projectLink ? (
-              <>
-                <Link className="underline text-blue-600" to={projectLink}>
-                  <div className="flex">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                      />
-                    </svg>
-                    &nbsp; Demo
-                  </div>
-                </Link>
-              </>
-            ) : (
-              "Not available (Internal)"
-            )}
-          </span>
-        </div> */}
       </div>
     </>
   );

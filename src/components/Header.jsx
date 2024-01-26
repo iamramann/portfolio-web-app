@@ -57,12 +57,6 @@ function Header({ navItems }) {
             )}
 
             <Link to="#">
-              {/* <span
-                className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-3 px-6 bg-slate-700 text-sm text-slate-700  font-bold rounded-xl
-              hover:scale-105 dark:text-white border-2 border-slate-600 hover:bg-slate-900"
-              >
-                Read Blog
-              </span> */}
               <BtnSub className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-4 hover:scale-105">
                 <span className="text-sm text-white dark:text-white font-bold">
                   Read Blog

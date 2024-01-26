@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-      {/* <div className="bg-gradient-to-b from-gray-900 to-gray-600 w-screen"> */}
       <div className="h-dvh w-screen flex justify-center">
         <div className={`flex items-center justify-center`}>
           <div className="flex flex-wrap justify-center mt-0 lg:justify-start flex-col items-center">

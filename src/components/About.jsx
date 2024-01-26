@@ -97,12 +97,6 @@ function About() {
                               <article className="text-justify prose prose-sm prose-stone">
                                 {description}
                               </article>
-                              {/* <label className="font-semibold text-sm lg:text-md">
-                                Description:{" "}
-                              </label>
-                              <span className="text-sm lg:text-md">
-                                {description}
-                              </span> */}
                             </span>
 
                             <br />
