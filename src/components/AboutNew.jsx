@@ -62,9 +62,9 @@ export default function AboutNew() {
 
   return (
     <>
-      <div className="m-[80px] lg:my-0 lg:h-dvh container mx-auto flex items-center">
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 p-5">
-          <div className="lg:col-span-1 lg:p-5 dark:bg-slate-950">
+      <div className="m-[80px] xl:my-0 xl:h-dvh container mx-auto flex items-center">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 p-5">
+          <div className="lg:col-span-1 lg:flex lg:justify-center dark:bg-slate-950">
             <Card className="lg:w-96 dark:bg-slate-900 mt-5">
               <CardHeader floated={false} className="h-80">
                 <img src={assetReferences.pic1} alt="profile-picture" />
