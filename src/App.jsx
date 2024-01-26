@@ -20,13 +20,8 @@ function App() {
   useEffect(() => {
     const head = document.querySelector("html");
     head.classList.remove("light", "dark");
-    if (!localStorage.getItem("themeMode")) {
-      head.classList.add(themeMode);
-      localStorage.setItem("themeMode", themeMode);
-    } else {
-      head.classList.add(localStorage.getItem("themeMode"));
-      setThemeMode(themeMode);
-    }
+    head.classList.add(localStorage.getItem("themeMode") || themeMode);
+    setThemeMode(localStorage.getItem("themeMode"));
   }, [themeMode]);
 
   return (
@@ -44,16 +39,16 @@ function App() {
 
           <div className="w-10 h-10 fixed bottom-10 right-10  rounded-full inline-flex  justify-center items-center bg-white   py-2 border-slate-600 dark:bg-slate-700  shadow-xl">
             {themeMode === "dark" ? (
-              <span className=" ">
+              <span>
                 <DaySvg
-                  className="text-white cursor-pointer"
+                  className="text-black cursor-pointer day-svg"
                   toggleTheme={lightTheme}
                 />
               </span>
             ) : (
-              <span className=" ">
+              <span>
                 <NightSvg
-                  className="text-dark cursor-pointer"
+                  className="text-black cursor-pointer night-svg"
                   toggleTheme={darkTheme}
                 />
               </span>
