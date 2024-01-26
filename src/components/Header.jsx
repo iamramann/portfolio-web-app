@@ -40,7 +40,7 @@ function Header({ navItems }) {
                 );
               })}
             </ul>
-            {themeMode === "dark" ? (
+            {/* {themeMode === "dark" ? (
               <span className="mx-2">
                 <DaySvg
                   className="text-white cursor-pointer"
@@ -54,7 +54,7 @@ function Header({ navItems }) {
                   toggleTheme={darkTheme}
                 />
               </span>
-            )}
+            )} */}
 
             <Link to="#">
               <BtnSub className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-4 hover:scale-105">
