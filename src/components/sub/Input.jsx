@@ -1,4 +1,4 @@
-import React, { useId } from "react";
+import { useId } from "react";
 
 function Input({ label, className = "", type = "text", ...props }) {
   const id = useId();

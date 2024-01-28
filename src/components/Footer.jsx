@@ -1,4 +1,3 @@
-import React from "react";
 import { disclaimerText } from "../../constants";
 
 function Footer() {
