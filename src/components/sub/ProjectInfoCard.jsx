@@ -1,8 +1,6 @@
-import React from "react";
 import { mapTechnologiesColor } from "../../../constants";
 function ProjectInfoCard({ project }) {
-  const { id, name, purpose, contributions, technologies, projectLink } =
-    project;
+  const { id, name, purpose, contributions, technologies } = project;
 
   return (
     <>
