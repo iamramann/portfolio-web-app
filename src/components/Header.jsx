@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Bars3Svg, CodeSvg, DaySvg, NightSvg, XMarkSvg } from "./svg/Icons";
+import { Bars3Svg, CodeSvg, DownloadSvg, XMarkSvg } from "./svg/Icons";
 import { BtnSub } from "./sub";
-import useTheme from "../contexts/theme";
-
+import resume from "./Raman_Sharma_Resume.pdf";
 function Header({ navItems }) {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
-  const { themeMode, lightTheme, darkTheme } = useTheme();
 
-  function toggleSidebar(e) {
+  function toggleSidebar() {
     setIsSideMenuOpen((prev) => !prev);
   }
 
@@ -40,22 +38,6 @@ function Header({ navItems }) {
                 );
               })}
             </ul>
-            {/* {themeMode === "dark" ? (
-              <span className="mx-2">
-                <DaySvg
-                  className="text-white cursor-pointer"
-                  toggleTheme={lightTheme}
-                />
-              </span>
-            ) : (
-              <span className="mx-2">
-                <NightSvg
-                  className="text-dark cursor-pointer"
-                  toggleTheme={darkTheme}
-                />
-              </span>
-            )} */}
-
             <Link to="#">
               <BtnSub className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-4 hover:scale-105">
                 <span className="text-sm text-white dark:text-white font-bold">
@@ -63,7 +45,29 @@ function Header({ navItems }) {
                 </span>
               </BtnSub>
             </Link>
-            <div>
+            <a
+              href={resume}
+              download="Raman_Sharma_Resume"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BtnSub className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-4 hover:scale-105">
+                <span className="text-sm text-white dark:text-white font-bold flex justify-between items-center">
+                  <span htmlFor="">Resume</span>&nbsp;
+                  <DownloadSvg />
+                </span>
+              </BtnSub>
+            </a>
+            <div className="flex items-center">
+              <a
+                href={resume}
+                download="Raman_Sharma_Resume"
+                target="_blank"
+                rel="noreferrer"
+                className="lg:hidden"
+              >
+                <DownloadSvg className="text-white mx-2" />
+              </a>
               {!isSideMenuOpen ? (
                 <Bars3Svg
                   className="cursor-pointer lg:hidden dark:text-white"

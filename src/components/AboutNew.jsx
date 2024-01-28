@@ -2,9 +2,7 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
-  Tooltip,
   Timeline,
   TimelineItem,
   TimelineConnector,
@@ -16,14 +14,8 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import {
-  HomeIcon,
-  BellIcon,
-  CurrencyDollarIcon,
-} from "@heroicons/react/24/solid";
 
 import {
-  aboutMeText,
   assetReferences,
   educationDetails,
   workExperienceDetails,
@@ -62,7 +54,7 @@ export default function AboutNew() {
 
   return (
     <>
-      <div className="m-[80px] xl:my-0 xl:h-dvh container mx-auto flex items-center">
+      <div className="m-[80px] xl:h-dvh container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 p-5">
           <div className="lg:col-span-1 lg:flex lg:justify-center dark:bg-slate-950">
             <Card className="lg:w-96 dark:bg-slate-900 mt-5">

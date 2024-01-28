@@ -1,15 +1,9 @@
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 import { BtnSub, Input } from "./sub";
 
 export default function ContactNew() {
   return (
-    <div className="m-[80px] lg:h-dvh lg:my-0 container mx-auto flex justify-center items-center ">
+    <div className="m-[80px] lg:my-0 container mx-auto flex justify-center items-center ">
       <Card className="mt-6 w-5/6 lg:w-3/6 dark:bg-slate-950 border-zinc-200 border-2 dark:border-slate-900">
         <CardBody>
           <Typography
