@@ -64,9 +64,9 @@ function Header({ navItems }) {
                 download="Raman_Sharma_Resume"
                 target="_blank"
                 rel="noreferrer"
-                className="lg:hidden"
+                className="lg:hidden text-black"
               >
-                <DownloadSvg className="text-white mx-2" />
+                <DownloadSvg className="dark:text-white mx-2" />
               </a>
               {!isSideMenuOpen ? (
                 <Bars3Svg
