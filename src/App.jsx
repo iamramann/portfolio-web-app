@@ -1,12 +1,18 @@
-import { Outlet } from "react-router-dom";
-import { Footer, Header } from "./components";
-import { navItems } from "../constants";
-import { CustomThemeProvider } from "./contexts/theme";
 import { useEffect, useState } from "react";
-import { DaySvg, NightSvg } from "./components/svg/Icons";
+import AboutNew from "./components/AboutNew";
+import ContactNew from "./components/ContactNew";
+import Experience from "./components/Experience";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import { CustomThemeProvider } from "./contexts/theme";
 
 function App() {
-  const [themeMode, setThemeMode] = useState("dark");
+  const [themeMode, setThemeMode] = useState(
+    () => localStorage.getItem("themeMode") || "dark",
+  );
+
   const lightTheme = () => {
     setThemeMode("light");
     localStorage.setItem("themeMode", "light");
@@ -18,45 +24,25 @@ function App() {
   };
 
   useEffect(() => {
-    const head = document.querySelector("html");
-    head.classList.remove("light", "dark");
-    head.classList.add(localStorage.getItem("themeMode") || themeMode);
-    setThemeMode(localStorage.getItem("themeMode"));
+    const html = document.querySelector("html");
+    html.classList.remove("light", "dark");
+    html.classList.add(themeMode);
   }, [themeMode]);
 
   return (
-    <>
-      <CustomThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
-        <div className="w-full container-snap dark:bg-slate-950 relative">
-          <Header navItems={navItems} />
-          <main
-            className="min-h-[94%] overflow-hidden"
-            style={{ marginTop: "-61px" }}
-          >
-            <Outlet />
-          </main>
-          <Footer />
-
-          <div className="w-10 h-10 fixed bottom-10 right-10  rounded-full inline-flex  justify-center items-center bg-white   py-2 border-slate-600 dark:bg-slate-700  shadow-xl">
-            {themeMode === "dark" ? (
-              <span>
-                <DaySvg
-                  className="text-black cursor-pointer day-svg"
-                  toggleTheme={lightTheme}
-                />
-              </span>
-            ) : (
-              <span>
-                <NightSvg
-                  className="text-black cursor-pointer night-svg"
-                  toggleTheme={darkTheme}
-                />
-              </span>
-            )}
-          </div>
-        </div>
-      </CustomThemeProvider>
-    </>
+    <CustomThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+        <Header />
+        <main>
+          <Home />
+          <AboutNew />
+          <Experience />
+          <Projects />
+          <ContactNew />
+        </main>
+        <Footer />
+      </div>
+    </CustomThemeProvider>
   );
 }
 

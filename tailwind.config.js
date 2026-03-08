@@ -1,73 +1,94 @@
 /** @type {import('tailwindcss').Config} */
-import withMT from "@material-tailwind/react/utils/withMT";
-export default withMT({
+export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  // blocklist: ["relative"],
+  darkMode: "class",
   theme: {
-    colors: {
-      bermuda: "#78dcca",
-      sky: "#0369a1",
-      blue400: "#60a5fa",
-      tahiti: {
-        100: "#cffafe",
-        200: "#a5f3fc",
-      },
-      slate: {
-        600: "#475569",
-        700: "#334155",
-        900: "#0f172a",
-        950: "#020617",
-      },
-      zinc: {
-        300: "#d1d5db",
-        200: "#e5e7eb",
-      },
-    },
     extend: {
+      colors: {
+        violet: {
+          50: "#f5f3ff",
+          100: "#ede9fe",
+          200: "#ddd6fe",
+          300: "#c4b5fd",
+          400: "#a78bfa",
+          500: "#8b5cf6",
+          600: "#7c3aed",
+          700: "#6d28d9",
+          800: "#5b21b6",
+          900: "#4c1d95",
+          950: "#2e1065",
+        },
+        indigo: {
+          50: "#eef2ff",
+          100: "#e0e7ff",
+          200: "#c7d2fe",
+          300: "#a5b4fc",
+          400: "#818cf8",
+          500: "#6366f1",
+          600: "#4f46e5",
+          700: "#4338ca",
+          800: "#3730a3",
+          900: "#312e81",
+          950: "#1e1b4b",
+        },
+        slate: {
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
+          950: "#020617",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
       backgroundImage: {
-        hero: "url('../public/bg-img.jpg')",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "hero-gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
       },
-      margin: {
-        "80px": "80px",
-        "120px": "120px",
+      animation: {
+        "fade-in-up": "fadeInUp 0.6s ease-out forwards",
+        "fade-in": "fadeIn 0.8s ease-out forwards",
+        float: "float 6s ease-in-out infinite",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "spin-slow": "spin 8s linear infinite",
       },
-      minHeight: {
-        "128px": "32rem",
+      keyframes: {
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+      },
+      boxShadow: {
+        glow: "0 0 20px rgba(124, 58, 237, 0.3)",
+        "glow-lg": "0 0 40px rgba(124, 58, 237, 0.4)",
+        "glow-indigo": "0 0 20px rgba(79, 70, 229, 0.3)",
       },
     },
   },
-  // eslint-disable-next-line no-undef
   plugins: [require("@tailwindcss/typography")],
   safelist: [
     {
       pattern:
-        /bg-(rose|indigo|yellow|orange|teal|pink|purple|sky|red|gray|blue)-(50|100|200|300|400|500|600|700|800|900)/,
+        /bg-(rose|indigo|yellow|orange|teal|pink|purple|violet|sky|red|gray|blue|green)-(50|100|200|300|400|500|600|700|800|900)/,
     },
     {
       pattern:
-        /text-(rose|indigo|yellow|orange|teal|pink|purple|sky|red|gray|blue)-(50|100|200|300|400|500|600|700|800|900)/,
+        /text-(rose|indigo|yellow|orange|teal|pink|purple|violet|sky|red|gray|blue|green)-(50|100|200|300|400|500|600|700|800|900)/,
     },
   ],
-  // safelist: [
-  //   "bg-sky-50",
-  //   "text-sky-600",
-  //   "bg-rose-50",
-  //   "bg-red-100",
-  //   "text-rose-600",
-  //   "bg-indigo-50",
-  //   "text-indigo-600",
-  //   "bg-yellow-50",
-  //   "text-yellow-600",
-  //   "bg-orange-50",
-  //   "text-orange-600",
-  //   "bg-teal-50",
-  //   "text-teal-600",
-  //   "bg-pink-50",
-  //   "text-pink-600",
-  //   "bg-purple-50",
-  //   "bg-red-50",
-  //   "bg-red-900",
-  //   "bg-slate-900",
-  //   "text-purple-600",
-  // ],
-});
+};

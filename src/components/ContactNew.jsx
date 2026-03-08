@@ -1,52 +1,258 @@
-import { Card, CardBody, Typography } from "@material-tailwind/react";
-import { BtnSub, Input } from "./sub";
+import { useState } from "react";
+import { GithubSvg, HackerrankSvg, LinkedInSvg } from "./svg/Icons";
+
+const contactInfo = [
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-5 h-5"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+        />
+      </svg>
+    ),
+    label: "Email",
+    value: "kukreti.rs@gmail.com",
+    href: "mailto:kukreti.rs@gmail.com",
+  },
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-5 h-5"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+        />
+      </svg>
+    ),
+    label: "Location",
+    value: "India",
+    href: null,
+  },
+];
 
 export default function ContactNew() {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 4000);
+    setForm({ name: "", email: "", message: "" });
+  };
+
   return (
-    <div className="m-[80px] xl:h-dvh container mx-auto flex justify-center">
-      <Card className="mt-6 w-5/6 lg:w-3/6 dark:bg-slate-950 border-zinc-200 border-2 dark:border-slate-900">
-        <CardBody>
-          <Typography
-            variant="h5"
-            color="blue-gray"
-            className="mb-2 dark:text-white"
-          >
-            Contact Me
-          </Typography>
-          <div className="grid">
-            <Input label="Name" type="text" placeholder="Enter your name" />
-            <Input label="Email" type="email" placeholder="Enter your email" />
-            <div className="w-full p-2">
-              <label
-                htmlFor="message"
-                className="block text-black text-md font-bold leading-6 dark:text-white"
-              >
-                Message
-              </label>
-              <textarea
-                placeholder="Enter your message..."
-                id="message"
-                name="message"
-                className="w-full dark:bg-slate-700 bg-opacity-50 rounded border border-zinc-300 dark:border-slate-900 focus:border-slate-0 dark:focus:bg-white focus:ring-2 focus:ring-gray-200 h-32 focus:border-slate-600 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              ></textarea>
-            </div>
-            <div className="w-full p-2">
-              <BtnSub className="w-full inline-block border border-transparent bg-gray-900 px-8 py-2 text-center font-medium text-white hover:bg-gray-700 mx-auto">
-                Send Message
-              </BtnSub>
+    <section id="contact" className="py-24 bg-slate-50 dark:bg-slate-950">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 text-sm font-semibold mb-4">
+            Contact
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+            Get In{" "}
+            <span className="bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-violet-400 dark:to-indigo-400 bg-clip-text text-transparent">
+              Touch
+            </span>
+          </h2>
+          <p className="mt-4 text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
+            Have a project in mind or just want to chat? I&apos;d love to hear
+            from you.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+          <div className="lg:col-span-2 flex flex-col gap-6">
+            <div className="bg-white dark:bg-slate-800/80 rounded-2xl p-8 border border-slate-200 dark:border-slate-700/60 h-full">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                Let&apos;s talk
+              </h3>
+              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8">
+                I&apos;m currently open to new opportunities. Whether you have a
+                question or just want to say hi — my inbox is always open!
+              </p>
+
+              <div className="space-y-4 mb-8">
+                {contactInfo.map(({ icon, label, value, href }) => (
+                  <div key={label} className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-violet-50 dark:bg-violet-900/30 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">
+                      {icon}
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">
+                        {label}
+                      </p>
+                      {href ? (
+                        <a
+                          href={href}
+                          className="text-sm font-semibold text-slate-800 dark:text-slate-200 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+                        >
+                          {value}
+                        </a>
+                      ) : (
+                        <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                          {value}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div>
+                <p className="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide mb-3">
+                  Socials
+                </p>
+                <div className="flex gap-3">
+                  {[
+                    {
+                      href: "https://github.com/iamramann",
+                      icon: <GithubSvg />,
+                      label: "GitHub",
+                    },
+                    {
+                      href: "https://www.linkedin.com/in/iamramann/",
+                      icon: <LinkedInSvg />,
+                      label: "LinkedIn",
+                    },
+                    {
+                      href: "https://www.hackerrank.com/profile/hey_raman",
+                      icon: <HackerrankSvg />,
+                      label: "HackerRank",
+                    },
+                  ].map(({ href, icon, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={label}
+                      className="w-10 h-10 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-violet-600 hover:text-white dark:hover:bg-violet-600 dark:hover:text-white transition-all duration-200"
+                    >
+                      {icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-          <div className="lg:relative flex justify-center flex-col mx-auto ">
-            <div className="w-full mx-auto lg:w-full border-2 border-zinc-300 dark:border-slate-700 h-0 my-2"></div>
-            <p className="text-center p-2text-gray-700 text-md lg:text-md dark:text-white">
-              or send me direct email at
-            </p>
-            <p className="text-center text-md font-bold lg:text-xl text-slate-700 dark:text-white">
-              <a href="mailto:kukreti.rs@gmail.com">kukreti.rs@gmail.com</a>
-            </p>
+
+          <div className="lg:col-span-3">
+            <div className="bg-white dark:bg-slate-800/80 rounded-2xl p-8 border border-slate-200 dark:border-slate-700/60">
+              {submitted && (
+                <div className="mb-6 flex items-center gap-3 px-4 py-3 rounded-xl bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700/50 text-green-700 dark:text-green-400 text-sm font-medium">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-5 h-5 flex-shrink-0"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Message sent! I&apos;ll get back to you soon.
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      placeholder="John Doe"
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="john@example.com"
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all text-sm"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="Tell me about your project or idea..."
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-700/60 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all text-sm resize-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold text-sm hover:shadow-glow hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2"
+                >
+                  Send Message
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
           </div>
-        </CardBody>
-      </Card>
-    </div>
+        </div>
+      </div>
+    </section>
   );
 }

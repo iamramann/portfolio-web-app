@@ -1,29 +1,29 @@
 import BeboLogo from "./src/images/bebo_logo.jpg";
-import KukLogo from "./src/images/kuk_logo.png";
-import SDLogo from "./src/images/sd_logo_1.png";
-import Pic from "./src/images/pic.jpg";
-import Pic1 from "./src/images/pic-1.jpg";
 import BgImg from "./src/images/bg-img.jpg";
+import KukLogo from "./src/images/kuk_logo.png";
+import Pic1 from "./src/images/pic-1.jpg";
+import Pic from "./src/images/pic.jpg";
+import SDLogo from "./src/images/sd_logo_1.png";
 import {
   AngularSvg,
   BootstrapSvg,
   CSSSvg,
   CSharpSvg,
   DotNetSvg,
+  FirebaseSvg,
+  GitSvg,
+  Github1Svg,
   HTMLSvg,
   JSSvg,
-  JiraSvg,
-  ReactSvg,
-  TailwindSvg,
-  Github1Svg,
-  GitSvg,
   JavaSvg,
-  PythonSvg,
-  FirebaseSvg,
-  VSSvg,
-  VSCSvg,
+  JiraSvg,
   PostmanSvg,
+  PythonSvg,
+  ReactSvg,
   SSMSSvg,
+  TailwindSvg,
+  VSCSvg,
+  VSSvg,
 } from "./src/images/svg/";
 
 export const projects = [
@@ -211,19 +211,35 @@ export const educationDetails = [
 
 export const workExperienceDetails = [
   {
-    companyName: "Bebo Technologies Pvt. Ltd.",
+    companyName: "BearingPoint India",
     jobDescription:
-      "As a software engineer, I design, develop, and test cutting-edge software solutions, collaborating seamlessly with cross-functional teams to meet project requirements. My responsibilities extend to system architecture, where I contribute to the design of scalable and efficient software systems.",
-    position: "Software Engineer",
-    joinedOn: "March 17, 2022 - Present",
-    logo: assetReferences.beboLogo,
+      "Contributing to consulting engagements and delivering technology-driven solutions for enterprise clients, working across cross-functional teams to design and implement scalable systems.",
+    position: "Technology Consultant",
+    joinedOn: "Jan 22, 2026 - Present",
+    logo: null,
+  },
+  {
+    companyName: "Deloitte Consulting",
+    jobDescription:
+      "Worked on consulting projects involving enterprise application development, system integration, and delivering high-quality software solutions aligned with client requirements.",
+    position: "Technical Consultant",
+    joinedOn: "Oct 13, 2025 - Jan 19, 2026",
+    logo: null,
+  },
+  {
+    companyName: "Meritech Softwares",
+    jobDescription:
+      "Developed and maintained software applications, collaborated with teams to deliver features on time, and contributed to system design and architecture decisions.",
+    position: "Senior Software Engineer",
+    joinedOn: "Jun 7, 2024 - Sep 30, 2025",
+    logo: null,
   },
   {
     companyName: "Bebo Technologies Pvt. Ltd.",
     jobDescription:
-      "As a software engineer, I design, develop, and test cutting-edge software solutions, collaborating seamlessly with cross-functional teams to meet project requirements. My responsibilities extend to system architecture, where I contribute to the design of scalable and efficient software systems.",
-    position: "Trainee",
-    joinedOn: "January 31, 2022 - March 17, 2022",
+      "Designed, developed, and tested software solutions, collaborating with cross-functional teams to meet project requirements and contributing to scalable system architecture.",
+    position: "Software Engineer",
+    joinedOn: "Mar 17, 2022 - May 9, 2024",
     logo: assetReferences.beboLogo,
   },
 ];
