@@ -11,6 +11,11 @@ function Footer() {
   return (
     <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <p className="text-xs text-slate-400 dark:text-slate-600 text-center mb-6">
+          Disclaimer: All logos and trademarks displayed on this site are the
+          property of their respective owners and are used for identification
+          purposes only.
+        </p>
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <button
             onClick={() => scrollTo("home")}
