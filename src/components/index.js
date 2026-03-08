@@ -8,6 +8,7 @@ import Header from "./Header";
 import Home from "./Home";
 import NotFound from "./NotFound";
 import Projects from "./Projects";
+import Services from "./Services";
 
 export {
   About,
@@ -20,4 +21,5 @@ export {
   Home,
   NotFound,
   Projects,
+  Services,
 };

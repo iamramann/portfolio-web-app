@@ -43,7 +43,7 @@ export default function AboutNew() {
                 <div className="grid grid-cols-3 gap-2 text-center">
                   <div>
                     <p className="text-xl font-bold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
-                      3+
+                      4+
                     </p>
                     <p className="text-xs text-slate-500 dark:text-slate-400">
                       Years Exp.

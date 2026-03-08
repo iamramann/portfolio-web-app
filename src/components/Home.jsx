@@ -47,9 +47,9 @@ function Home() {
             </h2>
 
             <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              Specializing in building scalable, efficient web applications with
-              modern technologies. Passionate about clean code and great user
-              experiences.
+              4+ years of experience helping businesses grow through technology.
+              I build scalable web applications, modernize legacy systems, and
+              deliver digital solutions that drive real results.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">

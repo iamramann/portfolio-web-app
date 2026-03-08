@@ -330,7 +330,7 @@ export const projectManagementTools = [
 ];
 
 export const aboutMeText =
-  "Welcome to my corner of the web! I'm Raman Sharma, a dedicated software engineer with a knack for crafting efficient and innovative solutions. Specializing in Fullstack development, I thrive on turning challenges into opportunities. I believe in the power of teamwork and effective communication.";
+  "I'm Raman Sharma, a Full Stack Software Engineer with 4+ years of professional experience building scalable, high-performance web applications. From startups to global consulting firms like Deloitte and BearingPoint, I've helped businesses transform their ideas into powerful digital products. I specialize in crafting end-to-end solutions — clean, maintainable code on the backend and intuitive, responsive interfaces on the frontend. Whether you're looking to launch a new product, modernize a legacy system, or boost your business with the right technology, I bring the expertise and drive to make it happen.";
 
 export const disclaimerText =
   "Disclaimer: The images* used on this website are not owned by me. All images* are the property of their respective owners. I do not claim ownership of these images and acknowledge the intellectual property rights of the original creators.";
