@@ -120,7 +120,7 @@ function Home() {
                   <span className="text-lg">💼</span>
                   <div>
                     <p className="text-xs font-bold text-slate-800 dark:text-white">
-                      3+ Years
+                      4+ Years
                     </p>
                     <p className="text-xs text-slate-500 dark:text-slate-400">
                       Experience
